@@ -19,6 +19,7 @@ if command -v omarchy >/dev/null 2>&1; then
   omarchy-shell shell rescanPlugins 2>/dev/null || true
   echo "Enabling plugin on bar..."
   omarchy plugin enable screensaver.toggle --section right 2>/dev/null || true
+  omarchy bar move screensaver.toggle --before omarchy.power 2>/dev/null || true
 fi
 
 echo "Successfully installed Omarchy Screensaver Toggle!"
