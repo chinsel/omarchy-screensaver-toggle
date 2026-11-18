@@ -13,14 +13,14 @@ BarWidget {
   implicitHeight: button.implicitHeight
 
   function launch() {
-    runCommand("omarchy launch screensaver &")
+    runCommand("omarchy-launch-screensaver force")
   }
 
   function runCommand(cmd) {
     if (root.bar && typeof root.bar.run === "function") {
       root.bar.run(cmd)
     } else {
-      cmdProc.command = ["bash", "-c", cmd]
+      cmdProc.command = ["bash", "-lc", cmd]
       cmdProc.running = true
     }
   }
