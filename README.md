@@ -1,27 +1,15 @@
-# Omarchy Screensaver Toggle Plugin
+# Omarchy Screensaver Launcher Plugin
 
-A custom menu bar widget for [Omarchy Linux](https://omarchy.org/) (Hyprland / Quickshell) that allows you to easily toggle the screensaver on or off directly from your status bar, with instant launch and options on right-click.
-
-![Screensaver Toggle Preview](https://raw.githubusercontent.com/chinsel/omarchy-screensaver-toggle/main/preview.png) *(or screenshot)*
+A clean menu bar widget for [Omarchy Linux](https://omarchy.org/) (Hyprland / Quickshell) that allows you to instantly launch the Omarchy screensaver with a single click.
 
 ---
 
 ## Features
 
-- **One-Click Toggle**: Left-click the menu bar icon to toggle screensaver availability on or off.
-  - **Enabled** (`󱄄`): Screensaver is allowed to run after your configured idle timeout (e.g. 150 seconds).
-  - **Disabled** (`󱄅`): Screensaver is suspended during idle (sets Omarchy's `screensaver-off` toggle flag).
-  - Native desktop notifications confirm when the screensaver is enabled or disabled.
-- **Right-Click Popup Menu**:
-  - Displays screensaver state and current idle timeout duration.
-  - Interactive toggle switch.
-  - **Launch Now** button to test or trigger the screensaver immediately.
-- **Middle-Click Quick Launch**: Instant shortcut to launch the screensaver right now (`omarchy launch screensaver`).
-- **Live State Sync**: Automatically watches `~/.local/state/omarchy/toggles/` so changes made via CLI or the Omarchy menu update the icon immediately.
-- **CLI / IPC Control**: Control or query the widget via Quickshell IPC:
+- **One-Click Launch**: Click the screensaver icon (`󱄄`) in the menu bar to immediately launch the Omarchy screensaver.
+- **Fast & Lightweight**: Minimal widget that triggers `omarchy-launch-screensaver force` without unnecessary popups or toggle overhead.
+- **CLI / IPC Control**: Can also be triggered via Quickshell IPC:
   ```bash
-  omarchy-shell screensaver.toggle status
-  omarchy-shell screensaver.toggle toggle
   omarchy-shell screensaver.toggle launch
   ```
 
