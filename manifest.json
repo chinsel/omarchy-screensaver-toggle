@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "screensaver.toggle",
+  "name": "Screensaver Toggle",
+  "version": "1.0.0",
+  "author": "Antigravity",
+  "description": "Menu bar plugin to toggle screensaver availability on or off, with quick launch.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Screensaver Toggle",
+    "description": "Menu bar widget to toggle screensaver on or off, with quick launch on right-click.",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
