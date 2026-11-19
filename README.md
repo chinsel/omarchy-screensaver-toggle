@@ -27,7 +27,7 @@ Clone this repository and run:
 Copy the files into your Omarchy user plugins folder:
 ```bash
 mkdir -p ~/.config/omarchy/plugins/screensaver.toggle
-cp manifest.json BarWidget.qml ~/.config/omarchy/plugins/screensaver.toggle/
+cp screensaver.toggle/manifest.json screensaver.toggle/BarWidget.qml ~/.config/omarchy/plugins/screensaver.toggle/
 
 # Rescan and enable on the bar
 omarchy-shell shell rescanPlugins

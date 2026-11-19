@@ -5,12 +5,13 @@ set -euo pipefail
 
 TARGET_DIR="$HOME/.config/omarchy/plugins/screensaver.toggle"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PLUGIN_SRC="$SCRIPT_DIR/screensaver.toggle"
 
 echo "Installing screensaver.toggle plugin into $TARGET_DIR..."
 mkdir -p "$TARGET_DIR"
 
-cp -f "$SCRIPT_DIR/manifest.json" "$TARGET_DIR/"
-cp -f "$SCRIPT_DIR/BarWidget.qml" "$TARGET_DIR/"
+cp -f "$PLUGIN_SRC/manifest.json" "$TARGET_DIR/"
+cp -f "$PLUGIN_SRC/BarWidget.qml" "$TARGET_DIR/"
 
 echo "Validating plugin..."
 if command -v omarchy >/dev/null 2>&1; then
